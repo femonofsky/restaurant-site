@@ -16,6 +16,41 @@
       {{template "flash.html" .}}
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <img src="/public/img/favicon.png" />
+    </div>
+    <div class="col-sm-4 test-right">
+      <a href="{{url "Accounts.Create"}}"> Create Account</a>
+    </div>
+  </div>
+  <div class="row actions">
+    <div class="col-sm-2 col-sm-offset-1">
+      <div>
+        <a href="#">
+          <img src="/public/img/favicon.png" class="img-responsive"/>
+        </a>
+      </div>
+      <h2 class="text-center">Eat In</h2>
+    </div>
+    <div class="col-sm-2 col-sm-offset-2">
+      <div>
+        <a href="#">
+          <img src="/public/img/favicon.png" class="img-responsive" />
+        </a>
+      </div>
+      <h2 class="text-center">Carry Out</h2>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1">
+      <div>
+        <a href="{{ url "Orders.Create"  }}">
+          <img src="/public/img/favicon.png" class="img-responsive" />
+        </a>
+      </div>
+      <h2 class="text-center">Deliver</h2>
+    </div>
+  </div>
+
 </div>
 
 {{template "footer.html" .}}

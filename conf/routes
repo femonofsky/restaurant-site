@@ -8,12 +8,16 @@ module:testrunner
 
 
 GET     /                                       App.Index
-
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
+GET     /customers/createAccounts                       Accounts.Create
+GET     /accounts/create                                404
+
+GET     /orders/:orderId/pay                            Orders.GetPayment
 # Map static resources from the /app/public folder to the /public path
 GET     /public/*filepath                       Static.Serve("public")
+GET     /favicon.ico                            Static.Serve("public", "img/favicon.png")
 
 # Catch all, this will route any request into the controller path
 #
@@ -23,4 +27,4 @@ GET     /public/*filepath                       Static.Serve("public")
 #
 # For rapid development uncomment the following to add new controller.action endpoints
 # without having to add them to the routes table.
-# *       /:controller/:action                    :controller.:action
+*       /:controller/:action                    :controller.:action
